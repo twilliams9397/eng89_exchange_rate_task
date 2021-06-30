@@ -9,5 +9,11 @@ class CurrencyExchange:
         for key, value in currency_list.items():
             print(f"{key}: {value}")
 
-    def convert(currency_data):
+    def convert(currency_data, curr1, curr2, amount):
+        currency_list = currency_data['rates']
+        val1 = currency_list.get(curr1)
+        val2 = currency_list.get(curr2) / val1
+        rate = val2 / val1
+        print(f"You would receive {val1 * rate * amount:.2f} of {curr2}.")
+
 
