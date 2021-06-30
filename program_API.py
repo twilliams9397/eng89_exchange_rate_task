@@ -14,7 +14,7 @@ curr_err = "Invalid currency code please try again"
 while True:
     curr1 = input("What currency do you have that you would like to exchange? "  # takes user inputs
                   "\nPlease use the currency code e.g. GBP for Great British Pounds.  ").upper()  # ensures that codes match file format
-    if not curr1.isdigit():
+    if not curr1.isdigit(): # checks inputs are correct format and in the the file
         if curr1 in currency_data['rates']:
             curr2 = input("What currency would you like to exchange to?  ").upper()
             if not curr2.isdigit():
