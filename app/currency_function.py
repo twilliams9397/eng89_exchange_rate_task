@@ -14,6 +14,6 @@ class CurrencyExchange:
         val1 = currency_list.get(curr1) # takes first currency input
         val2 = currency_list.get(curr2)  # takes second currency input
         rate = val2 / val1 # calculates exchange rate between currencies
-        print(f"You would receive {rate * amount:.2f} of {curr2}.") # returns amount to user with currency code
+        print(f"You would receive {rate * int(amount):.2f}{curr2}.") # returns amount to user with currency code
 
 
